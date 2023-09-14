@@ -1,9 +1,6 @@
 package com.example.demo.controller;
 
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping(value = "api/v1/user")
@@ -12,5 +9,17 @@ public class UserController {
     @GetMapping("/getUser")
     public String getUser(){
         return "Janith";
+    }
+    @PostMapping("/saveUser")
+    public String saveUser(){
+        return "User Saved!";
+    }
+    @PutMapping("/updateUser")
+    public String updateUser(){
+        return "Update User!";
+    }
+    @DeleteMapping("/deleteUser")
+    public  String deleteUser(){
+        return "Delete User!";
     }
 }
